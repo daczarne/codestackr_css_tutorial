@@ -48,7 +48,7 @@ The are several different ways in which we can define color values for all color
 
 - HTML color names: some colors have names like `black`, `white`, `blue`, etc. There's over 140 defined HTML colors. You can find a complete list of HTML color names [here](https://www.codestackr.com/blog/html-color-names/).
 
-- HEX values: this are 3 or 6 digit long alphanumerical combinations that represent hexadecimal numbers prefixed by a `#` sign.
+- HEX values: this are 3 or 6 digit long alphanumerical combinations that represent hexadecimal numbers prefixed by a `#` sign. In general we need to use the complete 6 digits of a HEX value, but if all 6 digits are the same, CSS will let us use 3 instead. So, `#ffffff` becomes `#fff`.
 
 - rgb/rgba: *rgb* stands for `red, green and blue`. Here we specify the amound of each color that our color should take in a 0 to 255 scale. So, for example, `red = rgb(255, 0, 0)`, or `white = rgb(255, 255, 255)`. *rgba* is similar but adds the *alpha* value or transparency value for our color. Alpha ranges from 0 to 1 where 0 is complete transparency and 1 if total opacity.
 
@@ -102,3 +102,21 @@ If we use the `padding` approach we need to rememeber how the values get passed.
 The `margin` property controls the space around an HTML element, preventing other elements from getting closer than the margin value that we specify. It can be defined the same way as `padding` by using separate declarations `margin-top`, `margin-left`, and so on, or by using the `margin` property and passing 1, 2 or 4 values.
 
 ## Box Model
+
+All HTML elements can be considered as boxes. The *Box Model* is the name we use when talking about the design and layout of the elements.
+
+![](img/box-model.png)
+
+ ## Position
+
+Elements can take different positions. Some of them are:
+
+- static: the default. It means the element will take it's position where it is in the HTML mark-up.
+
+- relative: this means that it is placed relative to its static position.
+
+- absolute: this means that the element will be positioned relative to its nearest positioned ancestor.
+
+- fixed: this means that the element will be positioned relative to the view port.
+
+- sticky: this is not supported in all browsers and needs a `-webkit-sticky` for Safari. A stiky element will always be visible at the top (or the side specified) if its original position is no longer visible.
