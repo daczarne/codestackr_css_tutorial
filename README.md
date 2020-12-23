@@ -3,6 +3,14 @@
 
 Notes from codeSTACKr's HTML tutorial. You can watch the tutorial [here](https://www.youtube.com/watch?v=Tfjd5yzCaxk).
 
+![archived](https://img.shields.io/badge/lifecycle-archived-red.svg)
+
+![github repo size](https://img.shields.io/github/repo-size/daczarne/css_tutorial_codestackr)
+![github code size](https://img.shields.io/github/languages/code-size/daczarne/css_tutorial_codestackr)
+
+![github languages](https://img.shields.io/github/languages/count/daczarne/css_tutorial_codestackr)
+![top language](https://img.shields.io/github/languages/top/daczarne/css_tutorial_codestackr)
+
 
 Table of content:
 
@@ -16,7 +24,7 @@ Table of content:
 [Padding](#padding)  
 [Margins](#margins)  
 [Box Model](#box-model)
-
+[Position](#position)
 
 ## What is CSS?
 
