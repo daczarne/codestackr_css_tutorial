@@ -46,10 +46,26 @@ body {
 }
 
 .menu-btn__burger::before {
-  transform: translate(-16px);
+  transform: translateY(-16px);
 }
 
 .menu-btn__burger::after {
-  transform: translate(16px);
+  transform: translateY(16px);
 }
 
+/* Animation */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  background: #ff652f;
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  background: #ff652f;
+  transform: rotate(-45deg) translate(35px, 35px);
+}
