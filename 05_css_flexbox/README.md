@@ -158,3 +158,20 @@ All the properties we covered above work just the same, but keep in mind that th
 
 ## Flex flow
 
+`flex-flow` is a combination for `flex-direction` and `flex-wrap`. So for example, we could simplify by combining `flex-direction: columns;` and `flex-wrap: wap;` into `flex-flow: column wrap;`.
+
+``` css
+.flexbox-container {
+  height: 95vh;
+  background: #0a4b23;
+  border: 3px solid #272727;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+```
+
+## Child elements
+
+
