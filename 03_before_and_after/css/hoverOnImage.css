@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  background: #272727;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  margin: 1em;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  opacity: 1;
+  transition: transform ease-out 250ms;
+}
+
+.card::before {
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  border-top: 3px solid #fff;
+  transform: scale(0, 1);
+  transform-origin: left;
+}
+
+.card::after {
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  border-top: 3px solid #fff;
+  transform: scale(0, 1);
+  transform-origin: right;
+}
+
+.card:hover::before,
+.card:hover::after {
+  transform: scale(1, 1);
+}
+
+.card_img {
+  width: 100%;
+  display: block;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover .card_img {
+  opacity: 0.4;;
+}
+
+.card_text {
+  position: absolute;
+  padding: 0 1em;
+  color: #fff;
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card:hover .card_text {
+  opacity: 1;
+}
+
+.card_title {
+  font-size: 2rem;
+}
