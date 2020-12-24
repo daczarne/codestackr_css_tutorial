@@ -1,4 +1,4 @@
-# codeSTACKr's CSS tutorial
+# Intoduction to CSS
 
 Notes from codeSTACKr's CSS for beginners tutorial. You can watch the tutorial [here](https://www.youtube.com/watch?v=Tfjd5yzCaxk).
 
