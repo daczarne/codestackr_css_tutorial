@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #272727;
+  color: #fff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 2rem;
+}
+
+/* First example: text */
+.first>p::before {
+  content: "Before ::";
+  width: 50px;
+  height: 50px;
+  background: #ff652f;
+}
+
+.first>p::after {
+  content: " :: After";
+  background: #ff652f;
+}
+
+/* Second example: rectangle */
+.second>p::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #ff652f;
+}
+
+.second>p::after {
+  content: "";
+}
+
+/* Third example */
+.third>p::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #ff652f;
+}
+
+.third>p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #ff652f;
+}
+
+/* Fourth example */
+.fourth>p::before {
+  content: url('https://unsplash.it/240/50');
+  display: block;
+}
+
+.fourth>p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #ff652f;
+}
+
+/* Fith example */
+.fith>p::before {
+  content: open-quote;
+  font-size: 4rem;
+  color: #0dcf37;
+}
+
+.fith>p::after {
+  content: close-quote;
+  font-size: 2rem;
+  color: #ff02dd;
+}
+
+/* Sixth example */
+.sixth>p a {
+  color: #ff652f;
+  text-decoration: none;
+}
+
+a[href$='.pdf']::after{
+  content: ' \f1c1';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 0.9em;
+}
+
+a[href^='http']::after{
+  content: ' \f35d';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 0.9em;
+}
