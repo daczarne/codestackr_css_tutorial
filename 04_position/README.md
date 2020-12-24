@@ -8,7 +8,7 @@ Static positioning is the default positioning in CSS. Therefore, if we do not de
 
 This position flows along with the HTML document flow. In this example we created two `div`s, which are block elements by default, so the first element we created (`class=child-box-1`) will be positioned at the top, and the second one (`class=child-box-2`) will be positioned after it.
 
-![](static-1.png)
+![](static/static-1.png)
 
 ## Relative
 
