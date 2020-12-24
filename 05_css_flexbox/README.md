@@ -172,6 +172,128 @@ All the properties we covered above work just the same, but keep in mind that th
 }
 ```
 
-## Child elements
+## Flex grow & shrink
 
+If we add `flex-grow: 1;` to one of the children elements, it will grow to fill out all of the available space (regardless of its width property).
 
+``` css
+.item-1 {
+  min-height: 50px;
+  flex-grow: 1;
+}
+```
+
+![](img/flex-grow-1.png)
+
+If we also set it to another child, then they will evently distribute the extra space between themselfs
+
+``` css
+.item-3 {
+  min-height: 250px;
+  flex-grow: 1;
+}
+```
+
+![](img/flex-grow-2.png)
+
+The `flex-grow` value determines the ratio at which the element grows, compared to the other elements with a `flex-grow` property. If the elements get to their `min-width` value, then they'll stop changing their sizes.
+
+``` css
+.item-2 {
+  min-height: 100px;
+  flex-grow: 10;
+}
+```
+
+![](img/flex-grow-3.png)
+
+`flex-shrink` acts in the opposite direction. The element with the hights `flex-shrink` value will shrink at that much faster ratio when the space in the viewport is scarse.
+
+## Flex basis
+
+In Flexbox, we can replace the use of the `width` property for the `flex-basis` property.
+
+``` css
+.flexbox-item {
+  background-color: #ff652f;
+  border: 3px solid #272727;
+  color: #fff;
+  font-size: 2em;
+  padding: 20px;
+  margin: 10px;
+  flex-basis: 15%;
+}
+```
+
+## Flex
+
+We can combine the grow, shrink and basis properties in just one property called `flex`. This property takes three values: grow, shrink, and basis. In the example below, the first and second elements grow and shrink at a ratio of 1, while the third does it a ratio of 5 (so 5 to 1 grow and shirnk). The first element has a basis width of 15%, while the second and third elements have a basis width of 25%.
+
+``` css
+.item-1 {
+  min-height: 50px;
+  flex-grow: 1;
+  flex: 1 1 15%;
+}
+
+.item-2 {
+  min-height: 100px;
+  flex: 1 1 25%;
+}
+
+.item-3 {
+  min-height: 250px;
+  flex: 5 5 25%;
+}
+```
+
+## Align self
+
+We can use the `align-self` property to modify the alinment of different elements individually.
+
+``` css
+.item-1 {
+  min-height: 50px;
+  flex-grow: 1;
+  flex: 1 1 15%;
+  align-self: center;
+}
+
+.item-2 {
+  min-height: 100px;
+  flex: 1 1 25%;
+  align-self: flex-end;
+}
+
+.item-3 {
+  min-height: 250px;
+  flex: 5 5 25%;
+  align-self: flex-start;
+}
+```
+
+![](img/align-self.png)
+
+## Centering
+
+Centering (both vertically and horizontally) an element in its parent can be hard in regular CSS. Since we can nest flex containers, we can align the numbers inside the boxes. First we need to set `display: flex;` to the parent of the element that we wish to center. Sin we now wish to position the numbers, their parents are the boxes. Therefore, we target the `.flexbox-item` selector. Now each of the boxes is a flex container themselves and we can use the `justify-content` and `align-items` properties to center their children (aka the numbers).
+
+``` css
+.flexbox-item {
+  background-color: #ff652f;
+  border: 3px solid #272727;
+  color: #fff;
+  font-size: 2em;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+![](img/center-numbers.png)
+
+## Ordering
+
+We can change the ordering of the boxes, without changing the HTML.
