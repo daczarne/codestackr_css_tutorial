@@ -1,0 +1,36 @@
+body {
+  margin: 10px;
+}
+
+div {
+  margin: 20px;
+}
+
+.px {
+  border: 2px solid #ff652f;
+  width: 200px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.percent {
+  border: 2px solid #4293c2;
+  width: 50%;
+  font-size: 150%;
+}
+
+.vw {
+  border: 2px solid #42c26d;
+  width: 30vw;
+  height: 10vh;
+}
+
+.rem {
+  border: 2px solid #c2429c;
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.em ul {
+  font-size: 2em;
+}
