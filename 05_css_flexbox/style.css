@@ -1,14 +1,15 @@
-
 .flexbox-container {
-  display: flex;
+  height: 95vh;
   background: #0a4b23;
   border: 3px solid #272727;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flexbox-item {
-  width: 15%;
+  width: 25%;
   background-color: #ff652f;
   border: 3px solid #272727;
   color: #fff;
