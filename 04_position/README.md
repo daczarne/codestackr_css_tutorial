@@ -88,5 +88,22 @@ If we change back orange so that now its right position it set to be 0 pixels, t
 
 ## Fixed
 
+When elements are set to fixed position they'll position themself relative to the screen. This will cause them to overflow their parents, but also to stay inside the viewport as you scorll down the page.
+
+``` css
+.child-box-1 {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 250px;
+  height: 250px;
+  background: #ff652f;
+}
+```
+
+![](fixed/fixed.png)
+
+## Sticky
+
 
 
