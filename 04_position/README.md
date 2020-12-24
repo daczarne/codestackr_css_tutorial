@@ -12,7 +12,7 @@ This position flows along with the HTML document flow. In this example we create
 
 ## Relative
 
-Relative position is similary to static, but we can now change the `top`, `right`, `bottom`, and `left` attributes. For example, is we set the first box to have `top=100px`, it will move down 100px from its original position.
+Relative position is similar to static, but we can now change the `top`, `right`, `bottom`, and `left` attributes. For example, if we set the first box to have `top=100px`, it will move down 100px from its original position.
 
 ![](relative/down-100.png)
 
@@ -24,13 +24,13 @@ Now box 1 is overflowing both its sibling (box 2) and its parent (box).
 
 ## Absolute
 
-Absolute positioning removes the element from the documents flow and positions itself in reference to a container. That container must have a position too, otherwise the child box will position itself in reference to the `html` element.
+Absolute positioning removes the element from the document's flow and positions itself in reference to a container. That container must have a position too, otherwise, the child box will position itself in reference to the `html` element.
 
 ![](absolute/absolute.png)
 
-The reason why the green box does not show in our page is that to it, the orange box does not exists. Therefore, from greens perspective, he is the first child of the container (it is there, but it's behind the orange box).
+The reason why the green box does not show on our page is that to it, the orange box does not exist. Therefore, from green's perspective, he is the first child of the container (it is there, but it's behind the orange box).
 
-If we now set `child-box-1` to have `right: 0;`, it will move all the way to the right, since its reference position is the `html` element. We can not see `child-box-2`.
+If we now set `child-box-1` to have `right: 0;`, it will move all the way to the right since its reference position is the `html` element. We can now see `child-box-2`.
 
 ![](absolute/right-0.png)
 
@@ -42,7 +42,7 @@ Now we add `top: 100px;`, and `child-box-1` will remove itself 100 pixels from t
 
 ![](absolute/top-100.px)
 
-If we wanted the green box to be ontop of the orange box, we'd need to use the `z-index` property. But, keep in mind that `z-index` only works if the element has a position. Since we don't want it to be removed from the documents flow, we'll give it `postion: relative;`
+If we wanted the green box to be on top of the orange box, we'd need to use the `z-index` property. But, keep in mind that `z-index` only works if the element has a position. Since we don't want it to be removed from the documents flow, we'll give it `position: relative;`
 
 ``` css
 .child-box-2 {
@@ -88,7 +88,7 @@ If we change back orange so that now its right position it set to be 0 pixels, t
 
 ## Fixed
 
-When elements are set to fixed position they'll position themself relative to the screen. This will cause them to overflow their parents, but also to stay inside the viewport as you scorll down the page.
+When elements are set to `fixed` position they'll position themself relative to the screen. This will cause them to overflow their parents, but also to stay inside the viewport as you scroll down the page.
 
 ``` css
 .child-box-1 {
@@ -105,5 +105,31 @@ When elements are set to fixed position they'll position themself relative to th
 
 ## Sticky
 
+Sticky is a combination of relative and fixed. When used on its own, nothing happens. `child-box-2` is acting as if it's `relative` positioned.
 
+``` css
+.child-box-1 {
+  width: 250px;
+  height: 250px;
+  background: #ff652f;
+}
 
+.child-box-2 {
+  position: sticky;
+  width: 250px;
+  height: 250px;
+  background: #14a76c;
+}
+```
+
+But if we change `top: 0;` now the green box will start scrolling down with the screen and staying inside the viewport, until it reaches the end of its parent container. Likewise, when scrolling up, it will stick to the top of the screen, until it reaches its sibling.
+
+``` css
+.child-box-2 {
+  position: sticky;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  background: #14a76c;
+}
+```
