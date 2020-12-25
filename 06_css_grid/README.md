@@ -224,4 +224,25 @@ We can simplfy our code even further by using the `grid-area` property. This pro
 
 ## Overlapping
 
+We can overlap items by defining overlapping areas.
 
+``` css
+.item-4 {
+  grid-area: 2 / 2 / span 2 / span 2;
+}
+```
+
+![](img/grid-overlap-four.png)
+
+When overlaping, we can use the `z-index` property to determine which element is on top of which.
+
+``` css
+.item-2 {
+  grid-area: 1 / 3 / 3 / 4;
+  z-index: 1;
+}
+```
+
+![](img/grid-overlap-four-z-index-two.png.png)
+
+With this, we can create mosaic layouts!!
