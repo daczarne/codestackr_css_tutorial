@@ -7,6 +7,8 @@ Notes from codeSTACKr's CSS Grid tutorial. You can watch the tutorial [here](htt
 [Creating a Grid](#creating-a-grid)
 [Positioning items](#positioning-items)
 [Grid gap](#grid-gap)
+[Grid area](#grid-area)
+[Overlapping](#overlapping)
 
 ## What is CSS Grid?
 
@@ -153,4 +155,73 @@ We can add a gap (space) between our elements using the `grid-row-gap` and `grid
 ```
 
 ![](img/gird-gap.png)
+
+## Grid area
+
+For each item we can specify where we want it to layout in the grid. To do so we use the `grid-column-start` and `grid-column-end` properties. Each one takes a number that tells the browser where the item should start and where it should end. Keep in mind that this numbers refere to the lines. So, for example, if we want item 1 to span the first two cells, it needs to `grid-column-start: 1;` and `grid-column-end: 3;` since 1 is the outermost line, and 3 is the line that separates column 2 from column 3.
+
+``` css
+.item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+```
+
+![](img/grid-two-column-span.png)
+
+If we now want item 2 to span two rows on the third column we can use the `grid-row-start` and `grid-row-end` properties. Keep in mind that we also need to specify the `grid-column-start` and `grid-column-end` properties here, or the browser will asum we want it to start on column 1.
+
+``` css
+.item-2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+```
+
+![](img/grid-two-rows-span.png)
+
+We can simplify this code using the `grid-column` and `grid-row` properties. These properties take two values (end and start) separated by a slash, `/`.
+
+``` css
+.item-1 {
+  grid-column: 1 / 3;
+}
+
+.item-2 {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+}
+```
+
+![](img/grid-two-rows-span.png)
+
+Suppose now that we want item 3 to span two rows and two columns (a square). We need to specify `grid-row` and `grid-column`, but instead of a start and end value, we can specify the start and the number of rows or columns to span.
+
+``` css
+.item-3 {
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 2;
+}
+```
+
+![](img/grid-square-three.png)
+
+We can simplfy our code even further by using the `grid-area` property. This property takes 4 values in the following order and format: `row-start / column-start / row-end / column-end`, or we can specify the row and column start values, and then the number of rows and number of columns to span.
+
+``` css
+.item-2 {
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+.item-3 {
+  grid-area: 2 / 1 / span 3 / span 2;
+}
+```
+
+![](img/grid-area-span.png)
+
+## Overlapping
+
 
