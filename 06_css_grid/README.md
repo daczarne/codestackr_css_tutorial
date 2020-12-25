@@ -97,4 +97,54 @@ To horizontally positioning items we use the `justify-items` property. By defaul
 
 Here we chose `center`, that centers each item withing its cell. We can see this the dev tools. When we hover over the `.grid-container`, Chrome shows us the grid lines.
 
-![](img/grid-dev-tools.png)
+![](img/grid-dev-tools-1.png)
+
+Likewise, to vertically position the elements we use the `align-items` property. This property also takes a positional values like `end`, `start`, `center`, etc.
+
+``` css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  justify-items: center;
+  align-items: center;
+}
+```
+
+![](img/grid-dev-tools-2.png)
+
+We can also align the entire gird within the container. To achive this we use the `justify-content` and `align-content` properties for horizontal and vertical alignment respectively.
+
+``` css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 200px);
+  justify-content: center;
+  align-content: center;
+}
+```
+
+![](img/grid-dev-tools-3.png)
+
+## Grid gap
+
+We can add a gap (space) between our elements using the `grid-row-gap` and `grid-column-gap` properties. These take a unit of measurement as their value, which represents the amount of gap to be left between elements. If we want to specify gap for both rows and columns we can use the `grid-gap` property. This property takes units of measurement as its value. It can take 1 or 2 values. If 1 value is specified then that will be the amount of space left between elements in both row and column-wise. If two values are specifies, the first one will be used for row gap, and the second one for column gap.
+
+``` css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: 20px 10px;
+}
+```
+
+![](img/gird-gap.png)
+
