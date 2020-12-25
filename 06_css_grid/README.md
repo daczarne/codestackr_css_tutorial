@@ -2,6 +2,12 @@
 
 Notes from codeSTACKr's CSS Grid tutorial. You can watch the tutorial [here](https://www.youtube.com/watch?v=0-DY8J_skZ0).
 
+### Table of content
+[What is CSS Grid?](#what-is-css-grid)
+[Creating a Grid](#creating-a-grid)
+[Positioning items](#positioning-items)
+[Grid gap](#grid-gap)
+
 ## What is CSS Grid?
 
 CSS Grid is a positioning and layout framework. Unlike Flexbox which is one dimensional, Grid is a two dimensional positioning system, so it can handle both rows and columns at the same time.
