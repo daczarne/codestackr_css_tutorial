@@ -9,6 +9,7 @@ Notes from codeSTACKr's CSS Grid tutorial. You can watch the tutorial [here](htt
 [Grid gap](#grid-gap)
 [Grid area](#grid-area)
 [Overlapping](#overlapping)
+[Cell alignment](#cell-alignment)
 
 ## What is CSS Grid?
 
@@ -246,3 +247,24 @@ When overlaping, we can use the `z-index` property to determine which element is
 ![](img/grid-overlap-four-z-index-two.png.png)
 
 With this, we can create mosaic layouts!!
+
+## Cell alignment
+
+We can align just one cell by using the `justify-self` and `align-self` properties. These properties take positional values.
+
+``` css
+.item-5 {
+  justify-self: center;
+  align-self: center;
+}
+```
+
+We can condense this code into one property called `place-self`. This can take on two positional values or one. If two values are passed, the browser will use the first one for vertical alignment (equivalent to using `align-self`) and the second one for horizontal alignment (equivalent to using `justify-self`).
+
+``` css
+.item-5 {
+  place-self: center;
+}
+```
+
+![](img/grid-place-self-prop.png.png)
