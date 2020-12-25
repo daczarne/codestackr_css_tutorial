@@ -9,6 +9,11 @@
   height: 100vh;
   border: 10px solid #14a76c;
   display: grid;
+  grid-template: 
+    "header header header header" 60px
+    "nav main . ads" 1fr
+    "footer footer footer footer" 60px
+    / 20% 1fr 50px 15%;
 }
 
 .grid-item {
@@ -18,21 +23,21 @@
 }
 
 .item-1 {
-
+  grid-area: header;
 }
 
 .item-2 {
-
+  grid-area: nav;
 }
 
 .item-3 {
-
+  grid-area: main;
 }
 
 .item-4 {
-
+  grid-area: ads;
 }
 
 .item-5 {
-
+  grid-area: footer;
 }

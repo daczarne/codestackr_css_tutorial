@@ -10,6 +10,8 @@ Notes from codeSTACKr's CSS Grid tutorial. You can watch the tutorial [here](htt
 [Grid area](#grid-area)
 [Overlapping](#overlapping)
 [Cell alignment](#cell-alignment)
+[Grid template](#grid-template)
+[Flexbox and Grid](#flexbox-and-grid)
 
 ## What is CSS Grid?
 
@@ -268,3 +270,93 @@ We can condense this code into one property called `place-self`. This can take o
 ```
 
 ![](img/grid-place-self-prop.png.png)
+
+## Grid template
+
+We can define the grid in another way entirely by using grid templates. These templates use names instead of the line numbers. So to use the templates, each chile element must have a name. To name them, we use the `grid-area` property and pass the name as the value.
+
+Now we can use the `grid-template-areas` in the `.grid-container` class and pass it a string value defining how our grid layout should look like.
+
+```css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav main ads"
+    "footer footer footer";
+}
+
+.item-1 {
+  grid-area: header;
+}
+
+.item-2 {
+  grid-area: nav;
+}
+
+.item-3 {
+  grid-area: main;
+}
+
+.item-4 {
+  grid-area: ads;
+}
+
+.item-5 {
+  grid-area: footer;
+}
+```
+
+![](img/grid-temp-layout.png)
+
+We can now use the `grid-template-rows` and `grid-template-columns` properties to specify the wdiths and heights of the rows and columns that we created with the template.
+
+``` css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav main ads"
+    "footer footer footer";
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 20% 1fr 15%;
+}
+```
+
+We can condense this code using the `grid-template` property. In this property we first pass the template, but adding the row height of each row. We then add a forward-slash `/` and pass the column widths.
+
+```css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template: 
+    "header header header" 60px
+    "nav main ads" 1fr
+    "footer footer footer" 60px
+    / 20% 1fr 15%;
+}
+```
+
+![](img/grid-temp-layout-temps.png)
+
+We can add empty cells with a dot (`.`) in the template.
+
+```css
+.grid-container {
+  height: 100vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template: 
+    "header header header header" 60px
+    "nav main . ads" 1fr
+    "footer footer footer footer" 60px
+    / 20% 1fr 50px 15%;
+}
+```
+
+![](img/grid-template-with-empty-cell.png)
