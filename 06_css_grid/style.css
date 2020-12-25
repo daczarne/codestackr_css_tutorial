@@ -8,6 +8,10 @@
 .grid-container {
   height: 100vh;
   border: 10px solid #14a76c;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  justify-items: center;
 }
 
 .grid-item {
