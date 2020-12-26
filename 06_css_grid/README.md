@@ -273,7 +273,7 @@ We can condense this code into one property called `place-self`. This can take o
 
 ## Grid template
 
-We can define the grid in another way entirely by using grid templates. These templates use names instead of line numbers. So to use the templates, each chile element must have a name. To name them, we use the `grid-area` property and pass the name as the value.
+We can define the grid in another way entirely by using grid templates. These templates use names instead of line numbers. So to use the templates, each child element must have a name. To name them, we use the `grid-area` property and pass the name as the value.
 
 Now we can use the `grid-template-areas` in the `.grid-container` class and pass it a string value defining how our grid layout should look like.
 
