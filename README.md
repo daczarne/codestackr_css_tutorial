@@ -25,7 +25,7 @@
 
 ### Tips and tricks
 
-- [Accordion](https://github.com/daczarne/codestackr_css_tutorial/tree/main/css_effects_accordion) (video [here](https://www.youtube.com/watch?v=dIyVTjJAkLw&list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4))
+- [Accordion](https://github.com/daczarne/codestackr_css_tutorial/tree/main/css_effects_accordion) (video [here](https://www.youtube.com/watch?v=_wBVNaREgSo&list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4&index=14))
 
 - [Hamburger](https://github.com/daczarne/codestackr_css_tutorial/tree/main/css_effects_hamburger) (video [here](https://www.youtube.com/watch?v=dIyVTjJAkLw&list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4&index=1))
 
