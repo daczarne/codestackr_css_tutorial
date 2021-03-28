@@ -11,7 +11,7 @@
 
 ### Content
 
-1. Introduction to CSS  
+1. Introduction to CSS (video [here](https://www.youtube.com/watch?v=Tfjd5yzCaxk&t=6s))  
 2. Units of measurement  
 3. Before and After pseudo elements  
 4. Position  
